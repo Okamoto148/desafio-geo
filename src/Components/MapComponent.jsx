@@ -17,11 +17,11 @@ const MapComponent = () => {
   const [cidadeGravada, setCidadeGravada] = useState('');
   const [listaCidades, setListaCidades] = useState([]);
   const [weatherData, setWeatherData] = useState(null);
-  const apiKey = 'cbaf0652b9824fc312e10fa742f1bcd9';
+  
 
   const fetchWeatherData = async () => {
     const novaCidade = cidade ? cidade : 'Campinas';
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${novaCidade}&appid=${apiKey}&units=metric&lang=pt`);
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${novaCidade}&appid=cbaf0652b9824fc312e10fa742f1bcd9&units=metric&lang=pt`);
 
 
     const data = await response.json();
