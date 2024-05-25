@@ -17,7 +17,7 @@ const MapComponent = () => {
   const [cidadeGravada, setCidadeGravada] = useState('');
   const [listaCidades, setListaCidades] = useState([]);
   const [weatherData, setWeatherData] = useState(null);
-  const apiKey = 'cbaf0652b9824fc312e10fa742f1bcd9'; // Substitua pela sua chave de API do OpenWeatherMap
+  const apiKey = 'cbaf0652b9824fc312e10fa742f1bcd9';
 
   const fetchWeatherData = async () => {
     const novaCidade = cidade ? cidade : 'Campinas';
@@ -75,7 +75,7 @@ const MapComponent = () => {
     });
 
     return () => map.setTarget(undefined);
-  }, [weatherData]); // Atualize o mapa quando os dados meteorológicos mudarem
+  }, [weatherData]); 
 
   const handleCidades = () => {
     const lista = [...listaCidades, cidade];
